@@ -9,7 +9,7 @@
 [![ML](https://img.shields.io/badge/ML-TFLite%20int8-orange?style=for-the-badge&logo=tensorflow)](https://www.tensorflow.org/lite)
 [![Protocol](https://img.shields.io/badge/Protocol-MQTT-purple?style=for-the-badge&logo=mqtt)](https://mqtt.org/)
 [![Python](https://img.shields.io/badge/Python-3.10+-green?style=for-the-badge&logo=python)](https://python.org)
-[![Accuracy](https://img.shields.io/badge/Model%20Accuracy-95%25-brightgreen?style=for-the-badge)](#-ml-pipeline)
+[![Accuracy](https://img.shields.io/badge/Model%20Accuracy-99%25-brightgreen?style=for-the-badge)](#-ml-pipeline)
 
 <br/>
 
@@ -43,7 +43,7 @@
 
 ## ✨ Overview
 
-Infrastructure failure is one of the most preventable yet under-monitored problems in civil engineering. This project builds a **low-cost, low-power, always-on structural health monitoring node** using commodity hardware and on-device machine learning.
+Infrastructure failure is one of the most preventable yet under-monitored problems in civil engineering. This project builds a **low-cost, low-power, always-on structural health monitoring node** using commodity hardware and on-device machine learning. The complete system has mainly three-stages: (1) data acquisition from the MPU-6050 via I2C, (2) on-chip signal processing and TFLite inference on the ESP32, and (3) MQTT-based alerting to a cloud broker monitored by a live browser dashboard. 
 
 ### What makes this different?
 
@@ -66,10 +66,10 @@ The ESP32 continuously reads vibration data from an MPU-6050 accelerometer, comp
 │                          BRIDGE NODE                                │
 │                                                                     │
 │   MPU-6050          ESP32 (Edge Inference)          Wi-Fi           │
-│  ┌────────┐        ┌──────────────────────┐       ┌──────┐         │
-│  │ 3-axis │─I²C──▶│  1. Sample 128pts    │──────▶│ MQTT │         │
-│  │  Accel │        │  2. Compute FFT      │       │Broker│         │
-│  └────────┘        │  3. Scale features   │       └──┬───┘         │
+│  ┌────────┐        ┌──────────────────────┐       ┌──────┐          │
+│  │ 3-axis │─I²C──▶│  1. Sample 128pts    │──────▶│ MQTT │          │
+│  │  Accel │        │  2. Compute FFT      │       │Broker│          │
+│  └────────┘        │  3. Scale features   │       └──┬───┘          │
 │                    │  4. TFLite int8 infer│          │              │
 │                    │  5. Threshold check  │          │              │
 │                    └──────────────────────┘          │              │
