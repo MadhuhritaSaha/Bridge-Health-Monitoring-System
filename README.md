@@ -11,7 +11,7 @@ This system is organized as a three-stage pipeline: (1) data acquisition from th
 [![ML](https://img.shields.io/badge/ML-TFLite%20int8-orange?style=for-the-badge&logo=tensorflow)](https://www.tensorflow.org/lite)
 [![Protocol](https://img.shields.io/badge/Protocol-MQTT-purple?style=for-the-badge&logo=mqtt)](https://mqtt.org/)
 [![Python](https://img.shields.io/badge/Python-3.10+-green?style=for-the-badge&logo=python)](https://python.org)
-[![Accuracy](https://img.shields.io/badge/Model%20Accuracy-99%25-brightgreen?style=for-the-badge)](#-ml-pipeline)
+[![Accuracy](https://img.shields.io/badge/Model%20Accuracy-95%25-brightgreen?style=for-the-badge)](#-ml-pipeline)
 
 <br/>
 
